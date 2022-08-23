@@ -15,7 +15,6 @@ h4,
 p {
     margin-top: 0;
     margin-bottom: 0;
-
 }
 .container {
     width: 1200px;
@@ -43,14 +42,28 @@ img {
     display: block;
 }
 /* --- Header --- */
-
+.page-header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ECECEC;
+}
+.nav-list {
+    display: flex;
+    align-items: center;
+}
 .site-nav {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+    padding: 32px 0;
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--title-text-color);
 }
 .logo {
+    margin-right: 93px;
     font-family: 'Raleway';
     font-weight: 700;
     font-size: 26px;
@@ -76,29 +89,29 @@ a {
     letter-spacing: 0.02em;
     color: var(--text-color);
 }
-/* --- Button --- */
-.button {
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
+.nav-button {
     display: flex;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.06em;
-    cursor: pointer;
-    background-color: var(--accent-color);
-    color: var(--primary-color);
-    border-color: transparent;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
-.button:hover, .button:focus {
-    background-color: var(--accent-btn-color);
+.nav-button-item {
+    margin-right: 50px;
 }
+
+/* --- Button --- */
 .section-hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
     background: var(--secondary-color);
 }
+.hero-box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 700px;
+}
 .hero {
+    margin-bottom: 30px;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -107,8 +120,36 @@ a {
     text-transform: uppercase;
     color: var(--primary-color);
 }
+.button {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 10px 32px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
+.button:hover, .button:focus {
+    background-color: var(--accent-btn-color);
+}
+
 /* --- Features --- */
+.section-features {
+    padding-top: 95px;
+}
+.features-list {
+    display: flex;
+    column-gap: 30px;
+}
 .features {
+    margin-bottom: 10px;
     font-weight: 700;
     line-height: 1.14;
     text-transform: uppercase;
@@ -118,6 +159,10 @@ a {
     line-height: 1.71;
 }
  /* --- Work --- */
+ .work {
+    padding-top: 105px;
+    padding-bottom: 94px;
+ }
 .visually-hidden {
     position: absolute;
     white-space: nowrap;
@@ -138,14 +183,34 @@ a {
     letter-spacing: 0.03em;
     color: var(--title-text-color);
 }
+.our-work {
+    margin-bottom: 50px;
+}
+.work-list {
+    display: flex;
+    column-gap: 30px;
+}
 /* --- Team --- */
 .team {
+    padding-top: 94px;
+    padding-bottom: 94px;
     background-color: var(--button-color);    
+}
+.team-title {
+    margin-bottom: 50px;
+}
+.team-list {
+    display: flex;
+    gap: 30px;
 }
 .team-cards {
     background-color: var(--primary-color);
 }
+.team-box {
+    padding: 30px;
+}
 .team-member {
+    margin-bottom: 10px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.1875;
@@ -159,9 +224,20 @@ a {
 }
 /* --- Footer --- */
 .footer-color {
+    padding-top: 60px;
+    padding-bottom: 60px;
     background-color: var(--secondary-color);
 }
 .logo-footer {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    color: var(--accent-color);
+}
+.logo-white {
     color: var(--primary-color);
 }
 .link-address {
@@ -172,8 +248,23 @@ a {
     font-style: normal;
     color: rgba(255, 255, 255, 0.6);
 }
+.footer-list {
+    margin-bottom: 9px;
+}
 /* --- Portfolio --- */
+.section-portfolio {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+.list-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 50px;
+}
 .list-btn {
+    padding: 6px 22px;
     font-family: inherit;
     font-style: normal;
     font-weight: 500;
@@ -182,7 +273,7 @@ a {
     text-align: center;
     background: var(--button-color);
     border-radius: 4px;
-    border-color: transparent;
+    border: none;
     cursor: pointer;
 }
 .list-btn:active, .list-btn:hover,
@@ -192,7 +283,17 @@ a {
     border-radius: 4px;
     background: var(--accent-color);
 }
+.list-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.cards-box {
+    padding: 20px 24px;
+    border: 1px solid #EEEEEE;
+}
 .list-title {
+    margin-bottom: 4px;
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
