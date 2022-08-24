@@ -58,11 +58,15 @@ img {
     display: flex;
     align-items: center;
     column-gap: 50px;
-    padding: 32px 0;
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--title-text-color);
+}
+.site-nav-link {
+    display: inline-block;
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 .logo {
     margin-right: 93px;
@@ -85,6 +89,9 @@ a {
     color: var(--accent-color);
 }
 .nav-link {
+    display: inline-block;
+    padding-top: 32px;
+    padding-bottom: 32px;
     font-style: normal;
     font-weight: 500;
     line-height: 1.14;
@@ -93,8 +100,6 @@ a {
 }
 .nav-button {
     display: flex;
-    padding-top: 32px;
-    padding-bottom: 32px;
 }
 .nav-button-item {
     margin-right: 50px;
@@ -150,9 +155,13 @@ a {
     display: flex;
     column-gap: 30px;
 }
+.features-item {
+    width: 270px;
+}
 .features {
     margin-bottom: 10px;
     font-weight: 700;
+    font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
     color: var(--title-text-color);
